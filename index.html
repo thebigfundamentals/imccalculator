@@ -4,29 +4,36 @@
 <meta charset="utf-8" />
 <script type="text/javascript" src="imc.js"></script>
 <link href="estilo.css" rel="stylesheet" media=all />
+<style type="text/css">
+#logo {
+    position: fixed;
+    bottom: 0%;
+    right: 75%;
+}
+</style>
 </head>
 
 <body>
 	<main class="corpo">
 <form name="calc_imc">
-
-<h1>Calcule seu IMC!</h1>
-<div>
-<label for="peso">Peso</label>
+  <h1>Calcule seu IMC!</h1>
+  <div>
 <input type="text" id="pesoid" placeholder="60" required="required" name="peso" />
-</div>
+<label for="peso">Peso</label>
+  </div>
 
 <div>
-<label for="altura">Altura</label>
 <input type="text" id="alturaid" placeholder="1.60" required="required" name="altura" />
+<label for="altura">Altura</label>
 </div>
-
+	<div>
 <input type="button" id = "btn" class="calcular" onclick="Calcular();" value="Calcular" />
-
+</div>
 <p><a id="imcresult"></a></p>
 <i><p><a id="fim"></a></p></i>
 
 </form>
+<div class="logo" id="logo"><img src="logo_imc.png" width="360" height="360" alt=""/></div>
 </main>
 </body>
 </html>
