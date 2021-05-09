@@ -1,0 +1,25 @@
+
+body {
+    padding: 0;
+    margin: 2;
+    background-color: #edf2f2;
+}
+
+main {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.corpo {
+  margin: 0 auto;
+  width: 250px;
+  padding: 10px;
+
+h1 {
+    font-family: Garamond, "Times New Roman";
+    font-size: 25px;
+    font-style: bold;
+}
+
+input {}
+
