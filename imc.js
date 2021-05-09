@@ -22,6 +22,22 @@ function Calcular() {
     altura2 = parseFloat(altura2);
     var imc = peso/altura2;
     imc = imc.toFixed(1);
+	
+	if (document.getElementById("pesoid").value=="" && document.getElementById("alturaid").value=="") {
+		alert('Por favor, preencha o seu peso e a sua altura. Esta é uma calculadora, não uma vidente!')
+    }
+	
+	else if (document.getElementById("pesoid").value=="") {
+		alert('Por favor, preencha o seu peso. Esta é uma calculadora, não uma vidente!')
+    }
+	
+	else if (document.getElementById("alturaid").value=="") {
+		alert('Por favor, preencha a sua altura. Esta é uma calculadora, não uma vidente!')
+    }
+	
+	else {
+		document.getElementById("fim").innerHTML = "Esta ferramenta é apenas para referência. O IMC, isoladamente, não reflete a condição física do indíviduo. Cuide do seu corpo!"
+	}
     
     if (imc < 18.5) {
     document.getElementById("imcresult").innerHTML = 'Seu IMC é de ' + imc +'. Este valor é considerado ABAIXO DO PESO, então vá comer uma rosquinha!'
@@ -46,6 +62,4 @@ function Calcular() {
     else if (imc >= 40) {
      document.getElementById("imcresult").innerHTML = 'Seu IMC é de ' + imc +'. Este valor é considerado OBESIDADE MÓRBIDA (Grau III). Não deixe de avaliar sua saúde em conjunto com um médico de sua confiança.'
     }
-
-    document.getElementById("fim").innerHTML = "Esta ferramenta é apenas para referência. O IMC, isoladamente, não reflete a condição física do indíviduo. Cuide do seu corpo!"
 }
