@@ -3,18 +3,23 @@
 <title> Calculadora de IMC</title>
 <meta charset="utf-8" />
 <script type="text/javascript" src="imc.js"></script>
+<link href="estilo.css" rel="stylesheet" media=all />
 </head>
 
 <body>
+	<main class="corpo">
 <form name="calc_imc">
 
 <h1>Calcule seu IMC!</h1>
-
+<div>
 <label for="peso">Peso</label>
-<input type="pes" id="pesoid" placeholder="60" required="required" name="peso" />
+<input type="text" id="pesoid" placeholder="60" required="required" name="peso" />
+</div>
 
+<div>
 <label for="altura">Altura</label>
-<input type="alt" id="alturaid" placeholder="1.60" required="required" name="altura" />
+<input type="text" id="alturaid" placeholder="1.60" required="required" name="altura" />
+</div>
 
 <input type="button" id = "btn" class="calcular" onclick="Calcular();" value="Calcular" />
 
@@ -22,5 +27,6 @@
 <i><p><a id="fim"></a></p></i>
 
 </form>
+</main>
 </body>
 </html>
