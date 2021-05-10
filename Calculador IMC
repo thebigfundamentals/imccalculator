@@ -1,0 +1,11 @@
+// teste calculadora imc
+
+function Calc() {
+var peso = document.getElementbyId("peso");
+var altura = document.getElementbyId("altura");
+var resultado = peso/(altura*altura);
+
+if (resultado.value < 18.5) {
+alert('O seu IMC é ' + resultado.value + ' e esse valor é considerado ABAIXO DO PESO. Considere comer mais uma rosquinha!')
+}
+}

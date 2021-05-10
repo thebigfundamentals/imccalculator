@@ -36,7 +36,7 @@ function Calcular() {
     }
 	
 	else {
-		document.getElementById("fim").innerHTML = "Esta ferramenta é apenas para referência. O IMC, isoladamente, não reflete a condição física do indíviduo. Cuide do seu corpo!"
+		document.getElementById("fim").innerHTML = "Esta ferramenta é apenas para referência. O IMC, isoladamente, não reflete a condição física do indíviduo e representa um método antigo de apuração da massa corporal. Em caso de dúvida, busque auxílio de um profissional."
 	}
     
     if (imc < 18.5) {
