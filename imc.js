@@ -23,7 +23,14 @@ function Calcular() {
     var imc = peso/altura2;
     imc = imc.toFixed(1);
 	
-	if (document.getElementById("pesoid").value=="" && document.getElementById("alturaid").value=="") {
+	if (document.getElementById("pesoid").value=="" || document.getElementById("alturaid").value=="") {
+		alert('Por favor, preencha ambos os campos. Esta é uma calculadora, não uma vidente.')
+	}
+		else {
+		document.getElementById("fim").innerHTML = "Esta ferramenta é apenas para referência. O IMC, isoladamente, não reflete a condição física do indíviduo e representa um método antigo de apuração da massa corporal. Em caso de dúvida, busque auxílio de um profissional."
+	} 
+
+	/* if (document.getElementById("pesoid").value=="" && document.getElementById("alturaid").value=="") {
 		alert('Por favor, preencha o seu peso e a sua altura. Esta é uma calculadora, não uma vidente!')
     }
 	
@@ -37,7 +44,9 @@ function Calcular() {
 	
 	else {
 		document.getElementById("fim").innerHTML = "Esta ferramenta é apenas para referência. O IMC, isoladamente, não reflete a condição física do indíviduo e representa um método antigo de apuração da massa corporal. Em caso de dúvida, busque auxílio de um profissional."
-	}
+	} 
+	
+	*/
     
     if (imc < 18.5) {
     document.getElementById("imcresult").innerHTML = 'Seu IMC é de ' + imc +'. Este valor é considerado ABAIXO DO PESO, então vá comer uma rosquinha!'

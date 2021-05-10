@@ -12,6 +12,14 @@
     bottom: 0%;
     right: 75%;
 }
+	input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
 </style>
 </head>
 
@@ -20,12 +28,12 @@
 <form name="calc_imc">
   <h1>Calcule seu IMC!</h1>
   <div>
-<input type="text" id="pesoid" placeholder="60" required="required" name="peso" />
+<input type="number" id="pesoid" placeholder="60" required="required" name="peso" />
 <label for="peso">Peso</label>
   </div>
 
 <div>
-<input type="text" id="alturaid" placeholder="1.60" required="required" name="altura" />
+<input type="number" id="alturaid" placeholder="1.60" required="required" name="altura"/>
 <label for="altura">Altura</label>
 </div>
 	<div>
@@ -35,7 +43,6 @@
 <i><p><a id="fim"></a></p></i>
 
 </form>
-<div class="logo" id="logo"></div>
 </main>
 </body>
 </html>

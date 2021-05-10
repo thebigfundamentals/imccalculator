@@ -1,3 +1,7 @@
+html, body, main {
+	height: 100%
+}
+
 body {
     padding: 0;
     margin: 2;
@@ -6,7 +10,7 @@ body {
     background-attachment: scroll;
     background-position: left bottom;
     background-repeat: no-repeat;
-    background-size: 250px;    
+    background-size: 150px;    
 	-webkit-padding: 0;
     -webkit-margin: 2;
     -webkit-background-color: #edf2f2;
@@ -14,15 +18,8 @@ body {
     -webkit-background-attachment: scroll;
     -webkit-background-position: left bottom;
     -webkit-background-repeat: no-repeat;
-    -webkit-background-size: 250px;   
-	-moz-padding: 0;
-    -moz-margin: 2;
-    -moz-background-color: #edf2f2;
-    -moz-background-image: url("logo_imc.png");
-    -moz-background-attachment: scroll;
-    -moz-background-position: left bottom;
-    -moz-background-repeat: no-repeat;
-    -moz-background-size: 250px;   
+    -webkit-background-size: 150px;   
+  
 }
 
 main {
@@ -59,11 +56,6 @@ h1 {
     position: absolute;
     position: fixed;
 }
-form div #pesoid {
-}
-form div #pesoid {
-}
-form div #pesoid {
-}
-form div #pesoid {
-}
+	
+	
+
