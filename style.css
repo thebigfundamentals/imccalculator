@@ -1,0 +1,241 @@
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+
+.titulo {
+    
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 3em;
+    
+    
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1FAEE;
+        
+}
+
+
+
+.corpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+.titulo h1 {
+    text-align: center;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #1D3557;
+}
+
+.subtitulo {
+    text-align: justify;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    color: #457B9D;
+}
+
+.wrapimg {
+    
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.wrapimg p {
+    font-family: ubuntu, sans-serif;
+    font-size: 0.8em;
+    color: #e63946;
+}
+
+
+.headercorpo {
+    
+    align-self: flex-start;
+    margin-left: 0.5em;
+}
+
+.headercorpo img {
+    width: 100px;
+    max-width: auto;
+}
+
+.calculadoras {
+    border-radius: 10px;
+  
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #457B9D;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+
+}
+
+.calculadoras h2 {
+    font-family: ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #F1FAEE;
+}
+
+.iac {
+   
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.formiac {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.imc {
+    
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.formimc {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+ 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#btniac {
+        margin-top: 1em;
+        box-shadow: 0px 10px 14px -7px #484a4b;
+        font-family: ubuntu, sans-serif;
+        font-weight: 300;
+        font-size: 0.9em;
+	
+}
+
+#btnimc {
+    margin-top: 0.4m;
+    box-shadow: 0px 10px 14px -7px #484a4b;
+    font-family: ubuntu, sans-serif;
+    font-weight: 300;
+    font-size: 0.9em;
+
+}
+
+
+
+.resultadoimc, .resultadoiac {
+    height: 6em;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ubuntu, sans-serif;
+    color: #F1FAEE;
+    font-weight: 400;
+    font-size: 1em;
+
+}
+
+.form-label {
+    font-family: ubuntu, sans-serif;
+    color: #a8dadc;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+@media (max-width: 900px){
+
+    .calculadoras {
+        flex-direction: column;
+        font-size: 0.8em;
+    }
+
+    .imc {
+
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .iac {
+
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 0.8em;
+    }
+
+    .headercorpo img {
+        width: 80px;
+    }
+
+    .wrapimg p {
+        font-size: 0.5em;
+    }
+}

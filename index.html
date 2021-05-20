@@ -1,48 +1,139 @@
-<html>
-	<meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-<head>
-	<meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-<title> Calculadora de IMC</title>
-<meta charset="utf-8" />
-<script type="text/javascript" src="imc.js"></script>
-<link href="estilo.css" rel="stylesheet" media=all />
-<style type="text/css">
-#logo {
-    position: fixed;
-    bottom: 0%;
-    right: 75%;
-}
-	input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-}
+<!DOCTYPE html>
+<html lang="en">
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC e IAC</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios/50/000000/gum-.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="imcv2.js"></script>
 </head>
 
+<div class="titulo">
+    <h1>Calculadora de IAC e IMC</h1>
+    <span class="subtitulo">Olá, está é uma calculadora experimental de Índice de Adiposidade Corpórea (IAC) e
+        de Índice de Massa Corpórea (IMC), desenvolvida utilizando html+css+bootstrap+javascript. Os índices
+        apresentados são apenas referências relacionadas a composição pessoal da pessoa. Nem o IMC, nem o IAC
+        devem ser considerados isoladamente como representantes da condição física do invídudo, além de
+        possuírem limitações. Caso esteja em dúvida, busque orientação de um profissional!</span>
+</div>
+
 <body>
-	<main class="corpo">
-<form name="calc_imc">
-  <h1>Calcule seu IMC!</h1>
-  <div>
-<input type="number" id="pesoid" placeholder="60" required="required" name="peso" />
-<label for="peso">Peso</label>
-  </div>
+    <section class="corpo">
 
-<div>
-<input type="number" id="alturaid" placeholder="1.60" required="required" name="altura"/>
-<label for="altura">Altura</label>
-</div>
-	<div>
-<input type="button" id = "btn" class="calcular" onclick="Calcular();" value="Calcular" />
-</div>
-<p><a id="imcresult"></a></p>
-<i><p><a id="fim"></a></p></i>
 
-</form>
-</main>
+        <div class="wrapimg">
+            <div class="headercorpo"><img src="logo_imc.png" alt="Logo com imagem da pantera cor de rosa"></div>
+            <p>desenvolvido por gschincariol // git thebigfundamentals</p>
+        </div>
+        <div class="calculadoras">
+            <div class="iac">
+                <div class="tituloiac">
+                    <h2>Calculadora de IAC</h2>
+                </div>
+                <div class="formiac">
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="circiac" class="form-label">Circunferência do quadril (cm)</label>
+                                    <input type="number" class="form-control form-control-sm" id="circiac"
+                                        placeholder="90">
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="mb-3">
+                                    <label for="alturaiac" class="form-label">Altura (m)</label>
+                                    <input type="number" class="form-control form-control-sm" id="alturaiac"
+                                        placeholder="1.75"></input>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <select id="sexoiac" class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Cada sexo tem parâmetros próprios para o IAC">
+                                    <option selected>Sexo</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <input type="button" id="btniac" class="calciac" onclick="calcIac();" value="Calcular IAC" />
+                </div>
+
+                <div class="resultadoiac">
+                    <p id="resultadoiac"></p>
+                </div>
+
+
+
+
+            </div>
+            <div class="imc">
+                <div class="tituloimc">
+                    <h2>Calculadora de IMC</h2>
+                </div>
+                <div class="formimc">
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="pesoimc" class="form-label">Peso (kg)</label>
+                                    <input type="number" class="form-control form-control-sm" id="pesoimc"
+                                        placeholder="80.0">
+                                </div>
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <div class="mb-3">
+                                    <label for="alturaimc" class="form-label">Altura (m)</label>
+                                    <input type="number" class="form-control form-control-sm" id="alturaimc"
+                                        placeholder="1.75"></input>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="button" id="btnimc" class="calciac" onclick="calcImc();" value="Calcular IMC" />
+
+                </div>
+                <div class="resultadoimc">
+                    <p id="resultadoimc"></p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+    </section>
+
 </body>
+
+
 </html>
