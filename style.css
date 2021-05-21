@@ -210,7 +210,9 @@ input[type=number] {
 
     .calculadoras {
         flex-direction: column;
+        align-items: center;
         font-size: 0.8em;
+        width: 80%;
     }
 
     .imc {

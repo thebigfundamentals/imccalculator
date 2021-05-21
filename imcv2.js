@@ -72,7 +72,7 @@ function calcIac() {
 
         }
 
-        else {
+        else if (sexo === "F") {
 
             if (iac <= 32.9) {
                 document.getElementById("resultadoiac").innerHTML = `Seu IAC é de ${iac}%, considerado NORMAL.`
