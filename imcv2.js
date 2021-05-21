@@ -50,7 +50,7 @@ function calcIac() {
     iac = iac.toFixed(1);
     let sexo = document.getElementById("sexoiac").value;
 
-    if (document.getElementById("circiac").value === "" || document.getElementById("alturaiac").value === "" || document.getElementById("sexoiac").value === "") {
+    if (document.getElementById("circiac").value === "" || document.getElementById("alturaiac").value === "" || document.getElementById("sexoiac").value === "indef") {
         alert('Por favor, preencha todos os campos.')
 
     }
