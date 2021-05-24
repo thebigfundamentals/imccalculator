@@ -85,12 +85,14 @@ body {
     width: 50%;
     display: flex;
     align-items: flex-end;
+    
 }
 
 .wrapimg p {
     font-family: ubuntu, sans-serif;
     font-size: 0.8em;
     color: #e63946;
+    
 }
 
 
@@ -122,6 +124,7 @@ body {
     font-weight: 700;
     font-size: 1.3em;
     color: #F1FAEE;
+    text-align: center;
 }
 
 .iac {
